@@ -1,0 +1,15 @@
+<h2>Pessoas</h2>
+<ul class="heroes">
+    <li *ngFor="let pessoa of pessoas">
+        <a routerLink="/detail/{{pessoa.id}}">
+            <span class="badge">Nome:</span>
+            {{pessoa.nome}}
+        </a>
+        <button type="button" class="delete" title="remover pessoa" (click)="deletarPessoa(pessoa)">
+            X
+        </button>
+    </li>
+
+</ul>
+<input #novaPessoa type="text">
+<button type="button" (click)="addPessoa(novaPessoa.value); novaPessoa.value=''">Adicionar Pessoa</button>

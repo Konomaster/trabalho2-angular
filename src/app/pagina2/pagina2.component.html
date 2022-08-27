@@ -1,0 +1,6 @@
+<div>
+<img *ngFor="let imagem of imagens" src="{{imagem}}" width="600">
+</div>
+<input #imgName type="text"/>
+<button (click)="addImage(imgName.value)">Adicionar Imagem</button>
+<button (click)="deleteImage(imgName.value)">Remover Imagem</button>
